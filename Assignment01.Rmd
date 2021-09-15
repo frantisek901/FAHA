@@ -25,9 +25,7 @@ Such a research helps to answer question: 'How do people understand the act of d
 
 ### Introduction  
 
-I focus on opinion dynamics by introducing the classical agenda-setting theory (AST) into new communication context<!--  of new media, especially social network sites (SNS)-->. The AST focuses on what the public is thinking about, not exactly what the public thinks -- AST shifts from *predicting public's position on certain issue* to *predicting what issues gain public attention*.
-<!-- Especially, AST predicts the most important issues of the public according the content of newspapers and TV newscast the public follows.  -->
-AST defines issue as a problem publicly recognized as a public problem and the agenda as the set of the most important issues. The classical applications of AST compare the results of public opinion surveys on most important issues with the numbers of news-pieces mentioning each issue in the most respected newspapers and TV newscasts. The classical AST correlation is between the amount of media content on issues and the public attention to these issues.  
+I focus on opinion dynamics by introducing the classical agenda-setting theory (AST) into new communication context. The AST focuses on what the public is thinking about, not exactly what the public thinks -- AST shifts from *predicting public's position on certain issue* to *predicting what issues gain public attention*. AST defines issue as a problem publicly recognized as a public problem and the agenda as the set of the most important issues. The classical applications of AST compare the results of public opinion surveys on most important issues with the numbers of news-pieces mentioning each issue in the most respected newspapers and TV newscasts. The classical AST correlation is between the amount of media content on issues and the public attention to these issues.  
 
 
 ### Correlations in my focus  
@@ -37,27 +35,18 @@ I want to study communication behavior of users on social network sites (SNS), e
 $$mentions_{connections} + mentions_{online~media} => p(issue~in~status_{user}) + p(discussion_{user})$$
 
 
-### Scholarly claims
+### Scholarly claims  
 
-Classical AST shows that 
-<!-- old media's content correlated with attention of the public, i.e.  -->
-the more the old media covered an issue the more important the issue was for the public. *Correlations in my focus* (see above) could tell us whether the same holds true for the online media and connected accounts on the SNS.
-<!-- Content analysis of issues covered in online media done via machine learning (ML) tells us about online media agenda, about the set of the most covered issues and amount of content devoted to each of them. The communication behavior on SNS of the user (i.e. statuses, discussions) tells us about user's personal agenda, about issues so important to her that she writes statuses on them and enters discussions on them.   -->
-
-Analogically to the example of the French Revolution transcripts analysis (video 2.1) we could distinguish between agenda leaders and agenda followers -- leaders use more the mere statuses and focus the attention of the rest of SNS users on the issue, followers use more discussions and amplify the public attention started by leaders.
-<!-- This distinction was not easily possible in classical AST research.   -->
-
-We could also find which users are more influenced by other users and which by online media. 
-<!-- We could distinguish this by the power of the correlation -- agenda of social leaders/followers would correlate more with agenda of other users, agenda of institutional leaders/followers would correlate more with the agenda of online media, and agenda of mixed leaders/followers would strongly correlate with both agendas, of other users and online media. We could also investigate the flows of issues through agendas of SNS users over the course of time and whether the issues enter SNS from online media or the users.    -->
-
-
+Classical AST shows that the more the old media covered an issue the more important the issue was for the public. *Correlations in my focus* (see above) could tell us whether the same holds true for the online media and connected accounts on the SNS. Analogically to the example of the French Revolution transcripts analysis (video 2.1) we could distinguish between agenda leaders and agenda followers -- leaders use more the mere statuses and focus the attention of the rest of SNS users on the issue, followers use more discussions and amplify the public attention started by leaders. We could also find which users are more influenced by other users and which by online media.   
+  
+  
 ### What could we learn?  
   
 By the content analysis we could measure both type of agendas -- media and personal. Content analysis of issues covered in online media done via machine learning (ML) tells us about online media agenda, about the set of the most covered issues and amount of content devoted to each of them. The communication behavior on SNS of the user (i.e. statuses, discussions) tells us about user's personal agenda, about issues so important to her that she writes statuses on them and enters discussions on them.  
 
+We could distinguish *leaders* from *followers* by the correlations. Present agenda of *leaders* should correlate with future agenda of *leaders' connections*, the present leaders' agenda could correlate with past agenda of *online media*, but not with the past agenda of *leaders' connections*. Present agenda of *followers* should correlate with past agenda of *online media* or *followers' connection* -- correlation with future agendas is not important.   
 
-
-We could distinguish this by the power of the correlation -- agenda of social leaders/followers would correlate more with agenda of other users, agenda of institutional leaders/followers would correlate more with the agenda of online media, and agenda of mixed leaders/followers would strongly correlate with both agendas, of other users and online media. We could also investigate the flows of issues through agendas of SNS users over the course of time and whether the issues enter SNS from online media or the users.
+We could distinguish types of *leaders* and *followers*  by the power of the correlations. Agenda of *social leaders/followers* would correlate more with agenda of other users, agenda of *institutional leaders/followers* would correlate more with the agenda of online media, and agenda of *mixed leaders/followers* would strongly correlate with both agendas (of other users and online media). We could also investigate the flows of issues through agendas of SNS users over the course of time and whether the issues enter SNS from online media or the users.
 
 
 
