@@ -1,0 +1,99 @@
+---
+title: "FAHA -- Assignment 02"
+output:
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- Important things to remember when submitting your work for peer review: -->
+<!-- All submissions must be uploaded before 22 Sep 2021 8am CEST -->
+
+
+# Question 1: Understanding
+
+<!-- QUESTION 1: UNDERSTANDING   You succeed in measuring the extent to which the words used in a book's blurb predict the gender of the book's author. Let’s tell a story! -->
+<!-- In the 1940s, there were very few women writing monographs in a certain field. Blurbs on the back of women's books looked similar to those on men's books. -->
+<!-- By the 1970s, however, blurbs began to treat men and women authors in the field quite differently. -->
+<!-- By the 2000s, greater awareness of equitable treatment, and sensitivity to gendered language choices, led this effect to decline. -->
+<!-- Draw (sketch on paper* or digitally) a "signal strength" graph, using the example for the Old Bailey as a template [Chapter 1; 15:10]. Your graph should show the change in blurbs' capacity to signal the book author's gender, as described above. The graph should include: (1) labeled x and y axes (with words, briefly describe what each axis means), (2) a graph element corresponding to the signal, and (3) an indication of how the different time periods are represented in the graph. The graph does not need to be quantitatively accurate but should include some indication of the relevant years, in response to (3). -->
+
+<!-- Grading Rubric -->
+<!-- Axes labelled descriptively: +2 -->
+<!-- Graph element corresponding to signal: +2 -->
+<!-- Indication of time periods: +1 -->
+<!-- Total points: X out of five -->
+
+I drew the graph in the R software. Here is the code used for the creation, followed by the graph itself.  
+
+```{r, fig.height=3, fig.width=7}
+library(tibble)
+library(ggplot2)
+corrs = c(rep(0, 29), seq(0, 0.62, 0.02), seq(0.64, 0.355, -0.015))
+df = tibble(years = 1940:2020, trend = corrs + 0.05, corrs = corrs + runif(81, 0, 0.1))
+
+ggplot(data = df, aes(x = years, y = corrs)) +
+  geom_line(linetype = 1) +
+  geom_line(aes(y = trend), color = 'blue', linetype = 2, size = 1.5 ) +
+  geom_vline(xintercept = c(1969, 2001), color = "red", linetype = 3) +
+  annotate("text", x = 1969, y = 0.75, label = "Since 1969 the correlation increases.", 
+           color = "darkgreen") +
+  annotate("text", x = 2001, y = 0.05, label = "Since 2001 the correlation decreases.", 
+           color = "darkgreen") +
+  annotate("text", x = 1954, y = 0.25, label = "Indiference period\n(1940-1969)") +
+  annotate("text", x = 1980, y = 0.55, label = "Differentiation period\n(1970-2000)") +
+  annotate("text", x = 2010, y = 0.25, label = "Equitation period\n(2001-2020)") +
+  labs(title = "Changes in average correlation between the gender of author and
+the presence of selected signalling words in blurbs over the course of time",
+    x = "Year of books' publication", 
+    y = "Correlation between the gender of author
+and the presence of signaling words",
+caption = "Note: The dashed blue line indicates longitudinal trend in average correlation.
+The solid black line indicates average correlation for respective year.") +
+  theme_minimal()
+```
+
+
+# Question 2: Application
+
+<!-- QUESTION 2: APPLICATION   Imagine you have a set of blurbs from a given time period. For each blurb, in addition to its date of appearance, you have information about whether or not the blurb comes from a newspaper (e.g., Financial Times, New York Times Book Review, Times Literary Supplement), or from an individual scholar identified solely by their academic institution (e.g., "Jonathan Lear, University of Chicago"). -->
+
+<!-- Help your peer-reviewers: proof-read your responses, and use a level of language appropriate for an “interested member of the public” (e.g., do not use jargon and do not take a complex fact for granted). Your answers should be succinct; aim for approximately 250 words per response – or cumulatively 500 words, distributed as needed. Peer-reviewers have the authority to award zero points to a submission that exceeds a total of 1000 words. -->
+
+
+## Question 2.1 -- Novelty in the set of blurbs  
+
+
+
+<!-- QUESTION 2.1   Imagine we did an analysis similar to the French Revolution parliamentary speeches study, measuring "novelty" in this set of blurbs. Looking year by year, we find that the blurbs written by individual, academic scholars are more novel than the blurbs from newspapers. Suggest a possible explanation for how this pattern of novelty might have emerged. -->
+
+<!-- Grading Rubric -->
+
+<!-- Non-technical description of how novelty is measured in this set of blurbs: +2 -->
+<!-- Specific description of a scenario that could account for higher novelty among blurbs from academic scholars compared to those from newspapers: +2 -->
+<!-- Account of why/how that scenario emerged: +2 -->
+<!-- Discretionary point for creativity, interest, clarity: +1 -->
+<!-- Total points: X out of 7 -->
+
+
+<!-- QUESTION 2.2   Imagine we now take into account the institutional affiliation of the individual scholars writing these blurbs. Speculate on one possible pattern we might see if we measured both the novelty and the imitation for each institution and compared novelty and imitation across institutions. It may help to review the "2x2" story in Chapter 1 [59:48]. -->
+
+<!-- Grading Rubric -->
+
+<!-- Description of what imitation is, in relationship to novelty: +2 -->
+<!-- Specific description of a scenario among academic institutions that would lead to a particular imitation-versus-novelty pattern: +2 -->
+<!-- Account of why/how that scenario would lead to the imitation-versus-novelty pattern described: +2 -->
+<!-- Discretionary point for creativity, interest, clarity: +1 -->
+<!-- Total points: X out of 7 -->
+
+
+
+
+
+
+
+
+

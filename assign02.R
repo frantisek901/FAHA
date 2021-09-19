@@ -26,8 +26,16 @@
 # Indication of time periods: +1
 # Total points: X out of five
 
+
+library(tibble)
+library(ggplot2)
+
 years = 1940:2020
-corrs = c(rep(0, 30), seq(0, 0.58, 0.02), seq(0.6, 0.30, 0.015))
+corrs = c(rep(0, 30), seq(0, 0.58, 0.02), seq(0.6, 0.30, -0.015))
+df = tibble(years = years, correlation = corrs + runif(81, 0, 0.1))
 
-
+ggplot(df, aes(years, correlation)) +
+  geom_line() +
+  geom_vline(xintercept = c(1970, 2000)) +
+  theme_minimal()
 
