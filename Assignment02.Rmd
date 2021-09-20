@@ -1,8 +1,8 @@
 ---
 title: "FAHA -- Assignment 02"
 output:
-  pdf_document: default
   word_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -67,25 +67,60 @@ The solid black line indicates average correlation for respective year.") +
 ## Question 2.1 -- Novelty in the set of blurbs  
 
 
-
 <!-- QUESTION 2.1   Imagine we did an analysis similar to the French Revolution parliamentary speeches study, measuring "novelty" in this set of blurbs. Looking year by year, we find that the blurbs written by individual, academic scholars are more novel than the blurbs from newspapers. Suggest a possible explanation for how this pattern of novelty might have emerged. -->
 
 <!-- Grading Rubric -->
 
 <!-- Non-technical description of how novelty is measured in this set of blurbs: +2 -->
+
+### Mesuring novelty  
+
+We could measure novelty by finding new metaphors. More precisely, we could count how many new metaphors not used in past 5 years before blurb's publication the blurb contains.  
+
 <!-- Specific description of a scenario that could account for higher novelty among blurbs from academic scholars compared to those from newspapers: +2 -->
+
+### Scenario description   
+
+The main idea is that raw reviews from academics and in newspapers are same, but a marketing department of publishing house chooses blurbs from raw reviews differently. My scenario is inspired by Simon's lecture, specifically by his citation of Rebecca L. Spang's e-mail (https://youtu.be/8rDUREWVnEM?t=808). Let's suppose for the simplicity that the newspapers' and academics' reviews contain same number of new metaphors, i.e. the raw material for blurbs is homogeneous. But then the marketing department takes its turn -- it excerpts for blurbs more often the passages with new metaphors from academics' reviews and more often the passages with old, conservative and mainstream metaphors from newspapers' reviews. The reason for the difference in blurbs is the strategic selection of the publishing house's marketing department, not the differences in raw reviews.   
+
+
 <!-- Account of why/how that scenario emerged: +2 -->
+
+### Why does the scenario emerged?  
+
+The root of scenario is the marketing department's expectations of the public's expectations. 
+<!-- The marketing department has stereotypes about what the public expects of newspapers and academia.  -->
+The employees in marketing department think that the public associates universities, academia and academics with novelty, reaching new horizons, inventions, ground-breaking theories etc. That is why they preferably excerpt the novel metaphor from academic's review for the blurb, because it is coherent with novelty expectation of the public expected by marketing department. On the other hand the marketing department thinks that the public associates newspapers with mainstream, conservative, time-tested and solid ideas. That is why they preferably excerpt the old metaphors from newspaper's review, because it is coherent with the solidity expectation of the public expected by marketing department. Expectations of expectations lead to strategic selection.   
+
 <!-- Discretionary point for creativity, interest, clarity: +1 -->
 <!-- Total points: X out of 7 -->
 
+
+## Question 2.2 -- Novelty and imitation across institutions    
 
 <!-- QUESTION 2.2   Imagine we now take into account the institutional affiliation of the individual scholars writing these blurbs. Speculate on one possible pattern we might see if we measured both the novelty and the imitation for each institution and compared novelty and imitation across institutions. It may help to review the "2x2" story in Chapter 1 [59:48]. -->
 
 <!-- Grading Rubric -->
 
 <!-- Description of what imitation is, in relationship to novelty: +2 -->
+
+### Description of imitation and novelty   
+ 
+For distinguishing imitation and novelty we again use the 5 years window. The novelty we measure as a count of the metaphors not used in other blurbs in the 5 years before the publication of respective blurb. The imitation then we measure as a count of the metaphors that have been used in the 5 years before the respective blurb's publication.  
+
 <!-- Specific description of a scenario among academic institutions that would lead to a particular imitation-versus-novelty pattern: +2 -->
+
+### Scenario description   
+
+
+
+
 <!-- Account of why/how that scenario would lead to the imitation-versus-novelty pattern described: +2 -->
+
+### Why does the scenario lead to the imitation-versus-novelty pattern?   
+
+
+
 <!-- Discretionary point for creativity, interest, clarity: +1 -->
 <!-- Total points: X out of 7 -->
 
