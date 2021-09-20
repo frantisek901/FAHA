@@ -57,7 +57,7 @@ Grey dots indicate average correlation for respective years.") +
 ```
 
 
-# Question 2: Application
+# Question 2: Application  
 
 <!-- QUESTION 2: APPLICATION   Imagine you have a set of blurbs from a given time period. For each blurb, in addition to its date of appearance, you have information about whether or not the blurb comes from a newspaper (e.g., Financial Times, New York Times Book Review, Times Literary Supplement), or from an individual scholar identified solely by their academic institution (e.g., "Jonathan Lear, University of Chicago"). -->
 
