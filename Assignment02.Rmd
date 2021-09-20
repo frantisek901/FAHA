@@ -27,9 +27,10 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- Indication of time periods: +1 -->
 <!-- Total points: X out of five -->
 
-I drew the graph in the R software. Here is the code used for the creation, followed by the graph itself.  
+I drew the graph in the R software.   
+<!-- Here is the code used for the creation, followed by the graph itself.   -->
 
-```{r, fig.height=3, fig.width=7}
+```{r, fig.height=3, fig.width=7, echo=FALSE}
 library(tibble)
 library(ggplot2)
 corrs = c(rep(0, 29), seq(0, 0.62, 0.02), seq(0.64, 0.355, -0.015))
@@ -81,7 +82,7 @@ We could measure novelty by finding new metaphors. More precisely, we could coun
 
 ### Scenario description   
 
-The main idea is that raw reviews from academics and in newspapers are same, but a marketing department of publishing house chooses blurbs from raw reviews differently. My scenario is inspired by Simon's lecture, specifically by his citation of Rebecca L. Spang's e-mail (https://youtu.be/8rDUREWVnEM?t=808). Let's suppose for the sake of simplicity that the newspapers' and academics' reviews contain same number of new metaphors, i.e. the raw material for blurbs is homogeneous. But then the marketing department takes its turn -- it excerpts for blurbs more often the passages with new metaphors from academics' reviews and more often the passages with old, conservative and mainstream metaphors from newspapers' reviews. The reason for the difference in blurbs is the strategic selection of the publishing house's marketing department, not the differences in raw reviews.   
+The main idea is that raw reviews from academics and in newspapers are same, but a marketing department of publishing house chooses blurbs from raw reviews differently, inspired by Simon's lecture (https://youtu.be/8rDUREWVnEM?t=808). Let's suppose for the sake of simplicity that the newspapers' and academics' reviews contain same number of new metaphors, i.e. the raw material for blurbs is homogeneous. But then the marketing department takes its turn -- it excerpts for blurbs more often the passages with new metaphors from academics' reviews and more often the passages with old, conservative and imitative metaphors from newspapers' reviews. The reason for the difference in blurbs is the strategic selection of the publishing house's marketing department, not the differences in raw reviews.   
 
 
 <!-- Account of why/how that scenario emerged: +2 -->
@@ -112,14 +113,19 @@ For distinguishing imitation and novelty we again use the 5 years window. The no
 
 ### Scenario description   
 
-The main idea is same -- raw reviews from different academic institutions are same, but a marketing department of publishing house chooses blurbs from raw reviews differently. Let's again suppose for the sake of simplicity that the reviews from different institutions contain same number of metaphors *not used* in previous 5 years in the blurbs and same number of metaphors *used* in previous 5 years in the blurbs. The raw material for blurbs is homogeneous and the academics across the institutions are influenced by the blurbs in the same way and same magnitude -- there is no real difference across the institutions neither in mechanism nor in result. But then the marketing department excerpts for blurbs more often the passages with new metaphors from prestigious institutions' academics (e.g. academics working on Ivy League Universities: https://en.wikipedia.org/wiki/Ivy_League). And the department excerpts more often the passages with old metaphors from other academics. The reason for the difference in blurbs is again the strategic selection of the publishing house's marketing department, not the differences in raw reviews.   
+The main idea is same -- raw reviews from different academic institutions are same, but a marketing department of publishing house chooses blurbs from raw reviews differently. Let's again suppose for the sake of simplicity that the reviews from different institutions contain same number of metaphors *not used* in previous 5 years in the blurbs and same number of metaphors *used* in previous 5 years in the blurbs. The raw material for blurbs is homogeneous and the academics across the institutions are influenced by the blurbs in the same way and same magnitude -- there is no real difference across the institutions neither in mechanism nor in result. But then the marketing department excerpts for blurbs more often the passages with new metaphors from publicly appreciated persons employed at prestigious institutions (e.g. Ivy League Universities: https://en.wikipedia.org/wiki/Ivy_League). And also the department excerpts more often the passages with imitative (previously used) metaphors from other academics. Then it seems like these other academics follow and imitate the publicly appreciated persons from prestigious institutions. The reason for the imitation-versus-novelty patter is again the strategic selection of the publishing house's marketing department, not the differences in raw reviews.   
 
 
 <!-- Account of why/how that scenario would lead to the imitation-versus-novelty pattern described: +2 -->
 
 ### Why does the scenario lead to the imitation-versus-novelty pattern?   
 
-The root of scenario is the marketing department's expectations of the public credit of different institutions. 
+The root of scenario is the interaction between *the rules of the academic labor market* on one hand and *the marketing department's expectations of the credit of publicly appreciated persons* on the other hand. The marketing department seeks novel metaphors and prefers introducing them from reviews of publicly appreciated persons and reusing/imitating them from reviews of other academics. But these publicly appreciated persons are not employed evenly over all universities, they are usually employed by prestigious universities. The pattern of *novelty in blurbs from prestigious institutions and imitation by other institutions* is the side effect. For the novel metaphors introduction the marketing department seeks the publicly appreciated persons, not their prestigious institutions. But since the sought after publicly appreciated persons are employed usually at prestigious universities, the novel metaphors are signed by employees of prestigious institutions and imitative metaphors by employees of others. Let's inspect these two interacting processes in closer detail, each in its own one paragraph.   
+
+Why does the marketing department prefer publicly appreciated persons? The marketing department employees think they must offer the public something new in the blurbs, something surprising, some new metaphors, so they seek and offer novelty in blurbs to catch the public's attention. But on the other hand the employees know the risk the novel metaphor might be rejected by the public as something incomprehensible, enigmatic and suspicious. To prevent the public's denial the employees support and insure novel metaphor by the publicly appreciated author of review. The employees expect that the public will easily accept the novel metaphor if the metaphor is signed by the publicly appreciated author. When the figurative, surprising and eyes-catching metaphor is introduced in the blurbs corpus then it might be reused also in blurbs/excerpts from reviews of other academics.   
+
+Why do the publicly appreciated persons work at prestigious institutions? Academics selectively choose their employing university and universities selectively hire their academics. The publicly appreciated persons choose the prestigious institutions because of the better work environment the prestigious institutions offer.
+Prestigious universities prefer the publicly appreciated persons, because their public appreciation further supports the prestige of the institution.    
 
 <!-- Discretionary point for creativity, interest, clarity: +1 -->
 <!-- Total points: X out of 7 -->
