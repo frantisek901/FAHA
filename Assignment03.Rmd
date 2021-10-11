@@ -1,0 +1,50 @@
+---
+title: "FAHA -- Assignment 03"
+output:
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+<!-- Instructions -->
+<!-- Each question should be answered in no more than 100 words. Peer-reviewers have the authority to award zero points to a submission that exceeds the word limit. -->
+
+<!-- Recall our definition of a research question as “a succinct (25 words or less) sentence, literally ending in a question mark, that helps organize your investigation, directs your attention, and keeps everyone on board”. [Chapter 3, 1:45] -->
+
+<!-- QUESTION 1.  Give an example of a research question in your field of study that would be best investigated by non-quantitative and non-computational research methods. Highlight the question using a typographical notation (e.g., **like this**, this, this, or other means). Follow with a brief discussion of a possible outcome(s) you might find. -->
+
+<!-- Grading Rubric -->
+
+<!-- Research question is self-explanatory (stands alone), is 25 words or less, and ends in a legitimate question mark:  +2 -->
+<!-- Clear and convincing statement of at least one possible outcome:  +2 -->
+<!-- Total points: X out of four -->
+
+## Question 1:
+
+***'How does watching crime news influence elderly people?'***  
+
+1) We might find that crime news-pieces reporting also the catching the offender make the elderly feel more secure, while reporting the crime without catching the offender makes elderly feel insecure.  
+
+2) We might find a difference between *elderly living alone in their own house* and *elderly living in institution caring after elderly*: paradoxically, elderly living alone might feel more secure because the living on their own gives them high level of self-confidence which is not shattered by crime news.
+
+
+<!-- QUESTION 2.  Give an example of a research question in your field of study that would be best investigated by quantitative or computational research methods. Highlight the question using a typographical notation (e.g., **like this**, this, this, or other means). Follow with a brief discussion of what analytical approach you might use and what you might find. You may present the approach at whatever level of detail you wish; examples from earlier lectures may be helpful guides. -->
+
+<!-- Grading Rubric -->
+
+<!-- Research question is self-explanatory (stands alone), is 25 words or less, and ends in a legitimate question mark:  +2 -->
+<!-- Clear presentation of an analysis approach (e.g., "I would operationalize X as Y, and ask if Y predicts Z"):  +2 -->
+<!-- Clear and convincing statement of at least one possible outcome:  +2 -->
+<!-- Total points: X out of six -->
+
+## Question 2:
+
+***'Does topic of Twitter tweet predict topics of new tweets written by users who commented or re-tweeted the tweet?'***   
+
+I would find topics of tweets via topical modelling used in example of French Revolution (Lecture 1). I would measure correlation of *the topic of new tweet* with *the topic of tweet lastly commented or re-tweeted*.  
+
+Results should show whether at least some users are contagious and introduce topics which other users follow and spread through communication network. We might then investigate differences between contagious and non-contagious users (e.g. number of followers), but it is different research question.  

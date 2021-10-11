@@ -1,0 +1,81 @@
+---
+title: "FAHA -- Assignment 04"
+date: '2021-10-11'
+output:
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- Instructions -->
+<!-- As always, please work to keep your responses succinct but understandable. This is a challenging assignment, but your answer should be no more than 500 words. Peer-reviewers have the authority to award zero points to a submission that exceeds the word limit. -->
+
+<!-- This assignment aims to bring together several themes that have come up in the course thus far. Feel free to be creative, and do not feel bounded by reality in the datasets, methods or tools that are available to you. -->
+
+<!-- (1) Present a research question. This should be in a qualitative form, something that could be communicated to someone without talking about datasets or methods. -->
+
+<!-- (2) Reframe that research question into a question about patterns – i.e., ask a new version of the research question in (1), now drawing attention to the way(s) in which it might "secretly" be a question about patterns. -->
+
+<!-- (3) Suggest a quantitative operationalization of those patterns on a particular data set. Define both the dataset and the type of answer your operationalization will deliver. You are welcome to invoke a fantasy dataset; it doesn't need to exist. You are likewise permitted a fantasy computational (machine learning) tool that can find patterns, but you should describe clearly what that tool will output. -->
+
+<!-- (4) The payoff: how do you connect the "cold" quantiative pattern results of (3) to the "hot" questions of human experience in (1)? Again, feel free to imagine infinitely powerful algorithms that can find interesting patterns. -->
+
+<!-- Grading rubric -->
+
+<!-- Part (1): +3 -->
+<!-- Part (2): +2 -->
+<!-- Part (3) dataset: +2 -->
+<!-- Part (3) operationalizaiton output: +2 -->
+<!-- Part (4): +2 -->
+<!-- Overall integration: +2 -->
+<!-- Discretionary: +2 -->
+<!-- Total: X of 15 points -->
+
+# (1) Qualitative research question   
+
+*"How do politicians, media and Twitter users inspire each other regarding issues to talk about?"*  
+
+**Definition:** *Issue* is public problem publicly recognized as socially important.
+
+
+# (2) Research question about patterns   
+
+*"How successfully do politicians, media and Twitter users influence each other in writing tweets about same issue?"*
+
+# (3) Dataset and operationalization   
+
+## (3.1) *Huge* dream dataset  
+
+We use all publicly available tweets written in English and posted on Twitter in year 2020. In all these tweets we identify with suitable computational method whether they mention some issue or not. Further, we computationally sort the tweets mentioning an issue according the main issue. We also computationally sort the tweeting accounts into three categories: *politician*, *medium*, *user*. Finally, for ***each tweet*** we record name of its authoring account, category of account, date and time of tweeting, tweet's main mentioned issue (or '*no issue*') and the main issues of ***the last tweets*** of ***all accounts*** followed by authoring account, names and categories of these followed accounts and dates and times of these tweets.
+We acquire complete information about relevant content on Twitter preceding each tweet.
+
+<!-- ### Variables useful for constructing patterns   -->
+
+From the complete information we can compute: how account *imitates* issues from other accounts, what *pressure* the followed accounts cast on the account in focus, how *unique* is the coverage of an account, and how successfully an account *persuades* its followers to cover the same issues. 
+<!-- We can find for each tweet preceding tweets covering same issue.  -->
+We can compute overall how many times the account covers in the present tweet the same issue as each of the followed accounts in their last preceding tweet -- i.e. *imitation*. Then we can compute what percentage of these accounts mention the same issue -- i.e. *pressure*. We can also compute for each account the percentages of covered issues over time and how much do these percentages differ from percentages of issues covered by followed accounts -- i.e. *uniqueness*. Lastly, we can compute how many times the following accounts also cover the same issue as the account in focus  -- i.e. *persuasiveness*.      
+
+
+## (3.2) Operationalization and its output
+
+### Types of accounts:
+
+<!-- We use *imitation*, *pressure*, *uniqueness* and *persuasiveness* for identification of certain ***dynamical types*** of accounts.  -->
+Accounts with low *imitation*, low *pressure*, high *uniqueness* and moderate or high *persuasiveness* are ***builders***. Accounts with high *imitation*, low *pressure*, moderate*uniqueness* and high *persuasiveness* are ***transmitters***. Accounts with high *imitation*, high *pressure*, low *uniqueness* and moderate or low *persuasiveness* are ***receivers***. Accounts with low *imitation*, low *pressure*, high *uniqueness* and low *persuasiveness* are ***outcasts***.  
+
+
+### Patterns of relations:
+
+We also look at the correlation of the ***type*** of account with the ***category*** of account. We find how many ***builders*** are *politicians*, *media* and *users*, same for other ***types***. We also look how many *media* are ***builders***, ***transmitters***, ***receivers*** and ***outcasts***, same for *politicians* and *users*.  
+
+
+### Hypothetical result:
+
+We find that few *media* and *politicians* accounts are ***builders***; majority of *media*, half of *politicians* and minority of *users* are ***transmitters***; minority of *media*, half of *politicians* and majority of *users* are ***receivers***; and very small fraction of *media*, *politicians* and *users* are ***outcasts***. 
+ 
+# (4) Payoff
+
+Our hypothetical result means that public sphere around important issues build few *media* and *politicians* accounts, their interplay and dialogue sets tone of public debate, they build the agenda of public sphere. Their accent on certain issues is then transmitted via persuasive *media*, *politicians* and minority of regular *users* account to the majority of regular Twitter *users*, rest of *media* and *politicians*. The very small fraction of ***outcasts*** means that public sphere is synchronized and issues resonate through whole public.
