@@ -1,13 +1,17 @@
 ---
 title: "FAHA -- Assignment 04"
-date: '2021-10-11'
+date: 'Word count: 477'
 output:
-  word_document: default
   pdf_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
+
+library(dplyr)
+library(tibble)
+library(knitr)
 ```
 
 <!-- Instructions -->
@@ -36,46 +40,60 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # (1) Qualitative research question   
 
-*"How do politicians, media and Twitter users inspire each other regarding issues to talk about?"*  
+*"How do Twitter accounts influence each other regarding issues to talk about?"*  
 
-**Definition:** *Issue* is public problem publicly recognized as socially important.
+**Definition:** *Issue* is public problem publicly recognized as publicly important.
 
 
 # (2) Research question about patterns   
 
-*"How successfully do politicians, media and Twitter users influence each other in writing tweets about same issue?"*
+*"How do Twitter accounts of politicians, media and regular users influence each other in writing tweets about same issue?"*
 
-# (3) Dataset and operationalization   
 
-## (3.1) *Huge* dream dataset  
+# (3) Dataset and operationalization
 
-We use all publicly available tweets written in English and posted on Twitter in year 2020. In all these tweets we identify with suitable computational method whether they mention some issue or not. Further, we computationally sort the tweets mentioning an issue according the main issue. We also computationally sort the tweeting accounts into three categories: *politician*, *medium*, *user*. Finally, for ***each tweet*** we record name of its authoring account, category of account, date and time of tweeting, tweet's main mentioned issue (or '*no issue*') and the main issues of ***the last tweets*** of ***all accounts*** followed by authoring account, names and categories of these followed accounts and dates and times of these tweets.
-We acquire complete information about relevant content on Twitter preceding each tweet.
+## (3.1) *Dream* dataset  
+
+We use tweets posted on Twitter in year 2020. We identify tweets mentioning some issue and sort these tweets according the main issue. We also sort the tweeting accounts into categories: *politician*, *medium*, *user*. For ***each tweet*** we record: authoring account, category of account, time of tweeting, main issue (or '*no issue*'), main issue of ***the last tweet*** of ***each followed account***, names and categories of these accounts and times of tweeting of these tweets.
+<!-- We acquire complete information about relevant content on Twitter preceding each tweet. -->
 
 <!-- ### Variables useful for constructing patterns   -->
 
-From the complete information we can compute: how account *imitates* issues from other accounts, what *pressure* the followed accounts cast on the account in focus, how *unique* is the coverage of an account, and how successfully an account *persuades* its followers to cover the same issues. 
+We then compute: how account *imitates* issues from other accounts, what *pressure* the followed accounts cast on the account in focus, how *unique* is the coverage of an account, and how successfully an account *persuades* its followers to cover the same issues. 
 <!-- We can find for each tweet preceding tweets covering same issue.  -->
-We can compute overall how many times the account covers in the present tweet the same issue as each of the followed accounts in their last preceding tweet -- i.e. *imitation*. Then we can compute what percentage of these accounts mention the same issue -- i.e. *pressure*. We can also compute for each account the percentages of covered issues over time and how much do these percentages differ from percentages of issues covered by followed accounts -- i.e. *uniqueness*. Lastly, we can compute how many times the following accounts also cover the same issue as the account in focus  -- i.e. *persuasiveness*.      
+We compute how many times the account covers the same issue as each of the followed accounts -- i.e. *imitation*. Then we compute what percentage of these accounts mention the same issue -- i.e. *pressure*. We also compute for each account the percentages of covered issues over time and how much do these percentages differ from percentages of issues covered by followed accounts -- i.e. *uniqueness*. We compute how many times the following accounts also cover the same issue as the account in focus  -- i.e. *persuasiveness*.      
 
 
 ## (3.2) Operationalization and its output
 
-### Types of accounts:
+<!-- ### Types of accounts: -->
 
-<!-- We use *imitation*, *pressure*, *uniqueness* and *persuasiveness* for identification of certain ***dynamical types*** of accounts.  -->
-Accounts with low *imitation*, low *pressure*, high *uniqueness* and moderate or high *persuasiveness* are ***builders***. Accounts with high *imitation*, low *pressure*, moderate*uniqueness* and high *persuasiveness* are ***transmitters***. Accounts with high *imitation*, high *pressure*, low *uniqueness* and moderate or low *persuasiveness* are ***receivers***. Accounts with low *imitation*, low *pressure*, high *uniqueness* and low *persuasiveness* are ***outcasts***.  
+We use *imitation*, *pressure*, *uniqueness* and *persuasiveness* for definition of types of accounts according following table: 
+<!-- Accounts with low *imitation*, low *pressure*, high *uniqueness* and moderate or high *persuasiveness* are ***builders***. Accounts with high *imitation*, low *pressure*, moderate *uniqueness* and high *persuasiveness* are ***transmitters***. Accounts with high *imitation*, high *pressure*, low *uniqueness* and moderate or low *persuasiveness* are ***receivers***. Accounts with low *imitation*, low *pressure*, high *uniqueness* and low *persuasiveness* are ***outcasts***.   -->
+
+```{r}
+types = tibble(`Type of account` = c("Builders", "Transmitters", "Receivers", "Outcasts"), 
+               Imitation =         c("low",      "high",         "high",      "low"),
+               Pressure =          c("low",      "low",          "high",      "low"),
+               Uniqueness =        c("high",     "moderate",     "low",       "high"),
+               Persuasiveness = c("moderate/high", "high",       "moderate/low", "low"))
+
+kable(types)
+```
+
 
 
 ### Patterns of relations:
 
-We also look at the correlation of the ***type*** of account with the ***category*** of account. We find how many ***builders*** are *politicians*, *media* and *users*, same for other ***types***. We also look how many *media* are ***builders***, ***transmitters***, ***receivers*** and ***outcasts***, same for *politicians* and *users*.  
+<!-- We also look at the correlation of the ***type*** of account with the ***category*** of account.  -->
+We find how many ***builders*** are *politicians*, *media* and *users*, same for  ***transmitters***, ***receivers*** and ***outcasts***. We also look how many *media* are ***builders***, ***transmitters***, ***receivers*** and ***outcasts***, same for *politicians* and *users*.  
 
 
 ### Hypothetical result:
 
 We find that few *media* and *politicians* accounts are ***builders***; majority of *media*, half of *politicians* and minority of *users* are ***transmitters***; minority of *media*, half of *politicians* and majority of *users* are ***receivers***; and very small fraction of *media*, *politicians* and *users* are ***outcasts***. 
  
-# (4) Payoff
-
-Our hypothetical result means that public sphere around important issues build few *media* and *politicians* accounts, their interplay and dialogue sets tone of public debate, they build the agenda of public sphere. Their accent on certain issues is then transmitted via persuasive *media*, *politicians* and minority of regular *users* account to the majority of regular Twitter *users*, rest of *media* and *politicians*. The very small fraction of ***outcasts*** means that public sphere is synchronized and issues resonate through whole public.
+ 
+# (4) Payoff  
+  
+Our hypothetical result means that few *media* and *politicians* accounts build public sphere around important issues, their interplay and dialogue sets tone of public debate, they build the agenda of public sphere. Their accent on certain issues is then transmitted via persuasive *media*, *politicians* and minority of regular *users* accounts to the majority of regular Twitter *users*, rest of *media* and *politicians*. The very small fraction of ***outcasts*** means that public sphere is synchronized and issues resonate through almost whole public.
